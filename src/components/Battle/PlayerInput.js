@@ -1,10 +1,10 @@
-import {useState} from "react";
+import { useState } from "react";
 
 
 const PlayerInput = (props) => {
     const [userName, setUserName] = useState("")
 
-    const handlerChange = (event) =>{
+    const handlerChange = (event) => {
         setUserName(event.target.value)
     }
 
@@ -15,22 +15,22 @@ const PlayerInput = (props) => {
 
     return (
         <form className="column" onSubmit={handelSubmit}>
-                <label className="header" htmlFor="username">{props.label}</label>
-                <input 
-                    id="username"
-                    type="text"
-                    placeholder="GitHub Username"
-                    autoCapitalize="off"
-                    value={userName}
-                    onChange={handlerChange}
-                ></input>
-                <button 
-                className="button" 
+            <label className="header" htmlFor="username">{props.label}</label>
+            <input
+                id="username"
+                type="text"
+                placeholder="GitHub Username"
+                autoCapitalize="off"
+                value={userName}
+                onChange={handlerChange}
+            ></input>
+            <button
+                className="button"
                 type="submit"
                 disabled={!userName}>
-                    Submit
-                </button>
-            </form>
+                Submit
+            </button>
+        </form>
     )
 }
 
@@ -47,30 +47,30 @@ const PlayerInput = (props) => {
 //        this.setState({userName: event.target.value})
 //    }
 
-    //handelSubmit = (event) => {
-    //    event.preventDefault();
-    //    console.log(this.state);
-    //}
+//handelSubmit = (event) => {
+//    event.preventDefault();
+//    console.log(this.state);
+//}
 
 //    render(){
 //        return (
-            //<form className="column" onSubmit={this.handelSubmit}>
-            //    <label className="header" htmlFor="username">{this.props.label}</label>
-            //    <input 
-            //        id="username"
-            //        type="text"
-            //        placeholder="GitHub Username"
-            //        autoCapitalize="off"
-            //        value={this.state.userName}
-            //        onChange={this.handlerChange}
-            //    ></input>
-            //    <button 
-            //    className="button" 
-            //    type="submit"
-            //    disabled={!this.state.userName}>
-            //        Submit
-            //    </button>
-            //</form>
+//<form className="column" onSubmit={this.handelSubmit}>
+//    <label className="header" htmlFor="username">{this.props.label}</label>
+//    <input 
+//        id="username"
+//        type="text"
+//        placeholder="GitHub Username"
+//        autoCapitalize="off"
+//        value={this.state.userName}
+//        onChange={this.handlerChange}
+//    ></input>
+//    <button 
+//    className="button" 
+//    type="submit"
+//    disabled={!this.state.userName}>
+//        Submit
+//    </button>
+//</form>
 //        )
 //    }
 //}

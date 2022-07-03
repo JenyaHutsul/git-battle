@@ -1,4 +1,4 @@
-const PlayerPreview = ({avatar,userName,children}) => {
+const PlayerPreview = ({ avatar, userName, children }) => {
     return (
         <div className="column">
             <img className="avatar" src={avatar} />
